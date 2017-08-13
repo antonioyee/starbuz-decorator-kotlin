@@ -8,15 +8,16 @@ import framework.Beverage
 
 class Whip(beverage: Beverage) : CondimentDecorator() {
 
-	var beverage: Beverage
+	internal var beverage: Beverage
 
 	init {
 		this.beverage = beverage
 	}
 
-	override fun getDescripton(): String {
-		return "${beverage.description}, Whip"
-	}
+	override var description: String = ""
+		get() {
+			return "${beverage.description}, Whip"
+		}
 
 	override fun cost(): Double {
 		return .10 + beverage.cost()

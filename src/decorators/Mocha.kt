@@ -8,15 +8,16 @@ import framework.Beverage
 
 class Mocha(beverage: Beverage) : CondimentDecorator() {
 
-	var beverage: Beverage
+	internal var beverage: Beverage
 
 	init {
 		this.beverage = beverage
 	}
 
-	override fun getDescripton(): String {
-		return "${beverage.description}, Mocha"
-	}
+	override var description: String = ""
+		get() {
+			return "${beverage.description}, Mocha"
+		}
 
 	override fun cost(): Double {
 		return .20 + beverage.cost()

@@ -7,6 +7,6 @@ import framework.Beverage
  */
  abstract class CondimentDecorator : Beverage() {
 
-	abstract fun getDescripton() : String
+	abstract override var description: String
 
 }

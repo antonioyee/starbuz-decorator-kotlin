@@ -6,8 +6,8 @@ package framework
 
 abstract class Beverage {
 
-	var description: String = "Unknow Beverage"
+	open var description = "Unknow Beverage"
 
-	abstract fun cost() : Double
+	abstract fun cost(): Double
 
 }
